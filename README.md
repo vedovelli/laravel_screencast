@@ -7,6 +7,7 @@
 2. Configurar o Laravel (acredite: é simples!)
 	Docs: http://laravel.com/docs/install
 3. Acessar a URL http://*seu_host_local*>/home/db para criar a tabela *profiles* no banco de dados.
+4. Acessar a URL http://*seu_host_local*>/
 
 Só isso!
 
