@@ -1,5 +1,4 @@
-{{-- Layout parent deste template --}}
-@layout('layouts.main')
+@layout('layouts.main') {{-- Layout parent deste template --}}
 
 {{-- As sections sao referenciadas e injetadas no template parent determinado acima --}}
 @section('main_content')

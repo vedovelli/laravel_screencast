@@ -1,5 +1,4 @@
-{{-- Layout parent deste template --}}
-@layout('profile.layout')
+@layout('profile.layout') {{-- Layout parent deste template --}}
 
 {{-- As sections sao referenciadas e injetadas no template parent determinado acima --}}
 @section('inner_content')
