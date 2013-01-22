@@ -1,12 +1,21 @@
+{{-- Layout principal da aplicacao. --}}
+{{-- Utiliza tanto a sintax do Blade template system quanto PHP puro --}}
+{{-- Docs: http://laravel.com/docs/views/templating#blade-template-engine --}}
+
 <?php
-Asset::container('custom')->add('CustomJS', 'js/custom.js');
-Asset::container('custom')->add('CustomCSS', 'css/custom.css')
+  /**
+  * Registra meus arquivos CSS e JS customizados para a aplicacao
+  */
+  Asset::container('custom')->add('CustomJS', 'js/custom.js');
+  Asset::container('custom')->add('CustomCSS', 'css/custom.css');
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Vedovelli using Laravel</title>
+{{-- Adiciona tanto o CSS para o bundle Bootstrapper quando meus estilos custom --}}
 {{ Asset::container('bootstrapper')->styles() }}
 {{ Asset::container('custom')->styles() }}
 </head>
@@ -14,6 +23,10 @@ Asset::container('custom')->add('CustomCSS', 'css/custom.css')
 <body>
 
 <?php
+  /**
+  * Cria a barra de navegacao superior utilizando as classes do bundle Bootstrapper
+  * Docs: http://bootstrapper.aws.af.cm/components#navbar
+  */
 	echo Navbar::create( array('class'=>'navbar-inverse'), Navbar::FIX_TOP )
 	->collapsible()
 	->with_brand('Vedovelli Laravel', '/home')
@@ -38,9 +51,11 @@ Asset::container('custom')->add('CustomCSS', 'css/custom.css')
     );
 ?>
 	<div id="main_container">
+    {{-- Injeta a section encontrada nos templates que estendem este template principal --}}
 		@yield('main_content')
 	</div>
 
+{{-- Adiciona tanto os JSs para o bundle Bootstrapper quando meus JSs custom --}}
 {{ Asset::container('bootstrapper')->scripts() }}
 {{ Asset::container('custom')->scripts() }}
 </body>
