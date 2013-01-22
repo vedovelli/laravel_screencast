@@ -1,4 +1,5 @@
-#Vedovelli estudando Laravel
+#Código de suporte ao futuro screencast sobre Laravel Framework
+*Laravel* - docs: http://laravel.com/docs/
 
 ## Instruções
 
