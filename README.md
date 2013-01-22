@@ -8,13 +8,13 @@
 	Docs: http://laravel.com/docs/install
 3. Criar um virtual host local apontando para a pasta_de_instalacao/public/ (neste caso o Google é seu melhor amigo.)
 4. Criar manualmente a tabela de sessions necessaria para gerenciamento das sessões
-```sql
-CREATE TABLE `sessions` (
-     `id` VARCHAR(40) NOT NULL,
-     `last_activity` INT(10) NOT NULL,
-     `data` TEXT NOT NULL,
-     PRIMARY KEY (`id`)
-);
+```
+ CREATE TABLE `sessions` (
+   `id` VARCHAR(40) NOT NULL,
+   `last_activity` INT(10) NOT NULL,
+   `data` TEXT NOT NULL,
+   PRIMARY KEY (`id`)
+ );
 ```
 5. Acessar a URL http://*seu_host_local*>/home/db para criar a tabela *profiles* no banco de dados.
 6. Acessar a URL http://*seu_host_local*>/
