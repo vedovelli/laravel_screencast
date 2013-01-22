@@ -4,10 +4,9 @@
 ## Instruções
 
 1. Clonar o repositorio na pasta escolhida para ser a pasta do projeto
-2. Instalar Laravel (acredite: é simples!)
+2. Configurar o Laravel (acredite: é simples!)
 	Docs: http://laravel.com/docs/install
-3. Criar a tabela no banco de dados acessando a URL http://*seu_host_local*>/home/db
-	Isso criará uma única tabela no banco de dados, chamada *profiles*
+3. Acessar a URL http://*seu_host_local*>/home/db para criar a tabela *profiles* no banco de dados.
 
 Só isso!
 
