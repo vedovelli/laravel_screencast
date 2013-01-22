@@ -8,6 +8,8 @@
 2. Criar a tabela no banco de dados acessando a URL http://*seu_host_local*>/home/db
 	Isso criará uma única tabela no banco de dados, chamada *profiles*
 
+Só isso!
+
 ## Código da aplicação
 O código específico da aplicação pode ser encontrado nos seguintes diretórios
 * application/controllers
@@ -16,4 +18,5 @@ O código específico da aplicação pode ser encontrado nos seguintes diretóri
 * public/css
 * public/js
 
-Só isso!
+## Observações
+* Não há AJAX. A aplicação é oldschool.
