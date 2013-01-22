@@ -13,7 +13,8 @@ class Home_Controller extends Base_Controller {
 	/**
 	* Responsavel por criar a tabela no banco de dados
 	*/
-	public function action_db(){
+	public function action_db()
+	{
 
 		/**
 		* Docs: http://laravel.com/docs/database/schema
@@ -28,7 +29,9 @@ class Home_Controller extends Base_Controller {
 			});
 			return 'Sucesso';
 		} catch(Exception $e){
+
 			return 'Tabela já existe. Nenhuma ação adicional.';
+
 		}
 	}
 
