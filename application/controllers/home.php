@@ -3,6 +3,14 @@
 class Home_Controller extends Base_Controller {
 
 	/**
+	* Filtro no construtor determina que todos os métodos acessados
+	* via rotas deste controller necessitam de usuario logado
+	*/
+	function __construct(){
+		$this->filter('before', 'auth');
+	}
+
+	/**
 	* Responsavel por exibir o Dashboard
 	*/
 	public function action_index()

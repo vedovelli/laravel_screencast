@@ -27,28 +27,48 @@
   * Cria a barra de navegacao superior utilizando as classes do bundle Bootstrapper
   * Docs: http://bootstrapper.aws.af.cm/components#navbar
   */
-	echo Navbar::create( array('class'=>'navbar-inverse'), Navbar::FIX_TOP )
-	->collapsible()
-	->with_brand('Vedovelli Laravel', '/home')
-	->with_menus(
-      Navigation::links(
-        array(
-          array('Home', '/home'),
-          array('Profile', '/profile'),
-          array('Dropdown', '#', false, false,
-            array(
-              array('Action', '#'),
-              array('Another action', '#'),
-              array('Something else here', '#'),
-              array(Navigation::DIVIDER),
-              array(Navigation::HEADER, 'Nav header'),
-              array('Separated link', '#'),
-              array('One more separated link', '#'),
+  if( Auth::check() ){
+    /**
+    * Barra superior exibida quando usuario está logado
+    */
+  	echo Navbar::create( array('class'=>'navbar-inverse'), Navbar::FIX_TOP )
+  	->collapsible()
+  	->with_brand('Vedovelli Laravel', '/home')
+  	->with_menus(
+        Navigation::links(
+          array(
+            array('Home', '/home'),
+            array('Profile', '/profile'),
+            array('Dropdown', '#', false, false,
+              array(
+                array('Action', '#'),
+                array('Another action', '#'),
+                array('Something else here', '#'),
+                array(Navigation::DIVIDER),
+                array(Navigation::HEADER, 'Nav header'),
+                array('Separated link', '#'),
+                array('One more separated link', '#'),
+              )
             )
           )
         )
       )
-    );
+    ->with_menus(
+        Navigation::links(
+          array(
+            array('Sair', '/access/logout'),
+          )
+        ), array('class'=>'pull-right')
+      )
+    ;
+  } else {
+    /**
+    * Barra superior exibida quando usuario não esta logado
+    */
+    echo Navbar::create( array('class'=>'navbar-inverse'), Navbar::FIX_TOP )
+      ->collapsible()
+      ->with_brand('Vedovelli Laravel', '/home');
+  }
 ?>
 	<div id="main_container">
     {{-- Injeta a section encontrada nos templates que estendem este template principal --}}

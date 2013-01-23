@@ -6,3 +6,9 @@
 #main_container{
 	margin: 20px 100px;
 }
+
+
+.login-form{
+	width: 275px;
+	margin: 50px auto;
+}
