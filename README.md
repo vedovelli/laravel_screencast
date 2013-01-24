@@ -11,8 +11,9 @@
 5. Insira o usuario no banco de dados
 
 ```sql
-INSERT INTO lusers (id, username, password) VALUES
- (1, 'vedovelli', '$2a$08$L/r8zfEdfYQyAGyte0TULuhA7eLuY1uq1UiQXVcEiZX2OKEmoy/wa');
+INSERT INTO users (id, username, password) 
+VALUES 
+(1, 'vedovelli', '$2a$08$L/r8zfEdfYQyAGyte0TULuhA7eLuY1uq1UiQXVcEiZX2OKEmoy/wa');
  ```
 
 6. Acessar a URL http://*seu_host_local*>/
