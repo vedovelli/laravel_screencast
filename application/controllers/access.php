@@ -25,7 +25,7 @@ class Access_Controller extends Base_Controller {
 			* Caso não tenha sido passado nem usuario nem senha, redireciona
 			* para a tela de login com feedback para o usuario.
 			*/
-			return Redirect::to('access')->with('warning', 'Both username and password are required');
+			return Redirect::to('access')->with('warning', 'Ambos usuario e senha são obrigatórios');
 
 		} else {
 
@@ -57,7 +57,7 @@ class Access_Controller extends Base_Controller {
 				* Caso os dados informados não estejam corretos, redireciona
 				* com feedback para o usuario.
 				*/
-				return Redirect::to('access')->with('warning', 'Login fail');
+				return Redirect::to('access')->with('warning', 'Falha no login');
 
 			}
 		}
@@ -73,7 +73,7 @@ class Access_Controller extends Base_Controller {
 		/**
 		* Redireciona com feedback para o usuario
 		*/
-		return Redirect::to('access')->with('info', 'Succesfuly logged out');
+		return Redirect::to('access')->with('info', 'Logout efetuado com sucesso');
 
 	}
 

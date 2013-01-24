@@ -40,7 +40,7 @@ Route::filter('auth', function()
 		/**
 		* Redireciona para o controller acess action index passando feedback para usuario
 		*/
-		return Redirect::to('access')->with('warning', 'Please log in!');
+		return Redirect::to('access')->with('warning', 'Login necessário');
 	}
 });
 

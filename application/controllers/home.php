@@ -7,7 +7,7 @@ class Home_Controller extends Base_Controller {
 	* via rotas deste controller necessitam de usuario logado
 	*/
 	function __construct(){
-		$this->filter('before', 'auth');
+		$this->filter('before', 'auth')->except(array('db'));
 	}
 
 	/**
@@ -34,6 +34,12 @@ class Home_Controller extends Base_Controller {
 				$table->string('firstname');
 				$table->string('lastname');
 				$table->timestamps();
+			});
+			Schema::table('users', function($table){
+				$table->create();
+				$table->increments('id');
+				$table->string('username');
+				$table->string('password', 60);
 			});
 			return 'Sucesso';
 		} catch(Exception $e){
