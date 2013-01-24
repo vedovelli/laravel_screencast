@@ -3,21 +3,19 @@
 
 ## Instruções
 
-1. Clonar o repositorio na pasta escolhida para ser a pasta do projeto
-2. Configurar o Laravel (acredite: é simples!)
+* Clonar o repositorio na pasta escolhida para ser a pasta do projeto
+* Configurar o Laravel (acredite: é simples!)
 	Docs: http://laravel.com/docs/install
-3. Criar um virtual host local apontando para a pasta_de_instalacao/public/ (neste caso o Google é seu melhor amigo.)
-4. Acessar a URL `http://*seu_host_local*>/home/db` para criar a tabela *profiles* no banco de dados.
-5. Insira o usuario no banco de dados
-
+* Criar um virtual host local apontando para a pasta_de_instalacao/public/ (neste caso o Google é seu melhor amigo.)
+* Acessar a URL `http://*seu_host_local*>/home/db` para criar a tabela *profiles* no banco de dados.
+* Insira o usuario no banco de dados
 ```sql
 INSERT INTO users (id, username, password) 
 VALUES 
 (1, 'vedovelli', '$2a$08$L/r8zfEdfYQyAGyte0TULuhA7eLuY1uq1UiQXVcEiZX2OKEmoy/wa');
  ```
-
-6. Acessar a URL `http://*seu_host_local*>/`
-7. Usuário e senha: vedovelli/1234
+* Acessar a URL `http://*seu_host_local*>/`
+* Usuário e senha: vedovelli/1234
 
 Só isso!
 
