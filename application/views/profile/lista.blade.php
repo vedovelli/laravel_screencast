@@ -8,12 +8,16 @@
 		{{ Form::button('Novo', array('class'=>'btn-primary pull-right')) }}
 	</div>
 
-	{{-- A tabela é gerada pelo bundle Bootstrapper --}}
-	{{-- Docs: http://bootstrapper.aws.af.cm/basecss#tables --}}
-	{{ Table::striped_bordered_hover_condensed_open(array('id'=>'profile_lista_container')) }}
-	{{ Table::headers('#', 'First Name', 'Last Name', 'Editar', 'Excluir') }}
-	{{ Table::body($body) }}
-	{{ Table::close() }}
+	@if(count($body)>0)
+		{{-- A tabela é gerada pelo bundle Bootstrapper --}}
+		{{-- Docs: http://bootstrapper.aws.af.cm/basecss#tables --}}
+		{{ Table::striped_bordered_hover_condensed_open(array('id'=>'profile_lista_container')) }}
+		{{ Table::headers('#', 'First Name', 'Last Name', 'Editar', 'Excluir') }}
+		{{ Table::body($body) }}
+		{{ Table::close() }}
+	@else
+		<p>Nenhum profile encontrado</p>
+	@endif
 
 	{{-- Links da paginacao, prontos e fornecidos pelo controller \o/ Coisa linda de dells! --}}
 	{{ $paginate }}
